@@ -35,7 +35,7 @@ type State = {
 const MARK  = { type: "ephemeral" };
 const WEB   = { type: "web_search_20260318", name: "web_search" };
 const FAST  = "fast-mode-2026-02-01";
-const COUNT = "https://api.anthropic.com/v1/messages/count_tokens";
+const COUNT = "http://127.0.0.1:3425/v1/messages/count_tokens";
 
 // Anthropic
 // =========
@@ -301,7 +301,7 @@ export namespace Anthropic {
   export const wire: Wire<State> = {
     key     : "anthropic",
     idle    : 300e3,
-    url     : "https://api.anthropic.com/v1/messages",
+    url     : "http://127.0.0.1:3425/v1/messages",
     headers : Anthropic.headers,
     body    : Anthropic.body,
     count   : Anthropic.count,

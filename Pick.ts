@@ -40,6 +40,8 @@ export const VENDORS: Vendor[] = ["claude-api", "openai-api"];
 const OPUS  : Model = { label: "opus-5.5",   id: "claude-opus-5-5",   speeds: ["slow", "fast"] };
 const SONNET: Model = { label: "sonnet-5.5", id: "claude-sonnet-5-5", speeds: ["slow"] };
 const HAIKU : Model = { label: "haiku-5.5",  id: "claude-haiku-5-5",  speeds: ["slow"] };
+// custom: route claude-api vendor to a local magpie gateway (Anthropic-compatible)
+const MAGPIE: Model = { label: "adaptive",    id: "group/adaptive",    speeds: ["slow"] };
 const OPENAI: Model[] = [
   { label: "gpt-6-luna",  id: "gpt-6-luna",  speeds: ["slow", "fast"] },
   { label: "gpt-6.1-sol", id: "gpt-6.1-sol", speeds: ["slow", "fast"] },
@@ -48,7 +50,7 @@ const OPENAI: Model[] = [
 
 // each vendor's models, at the speeds it runs them
 const MODELS: Record<Vendor, Model[]> = {
-  "claude-api": [OPUS, SONNET, HAIKU],
+  "claude-api": [OPUS, SONNET, HAIKU, MAGPIE],
   "openai-api": OPENAI,
 };
 

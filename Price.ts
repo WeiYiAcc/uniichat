@@ -23,6 +23,7 @@ const RATES: Record<string, Rate> = {
   "claude-opus-5-5"   : { input: 4,   write: 5,    read: 0.2,  output: 20  },
   "claude-sonnet-5-5" : { input: 2,   write: 2.5,  read: 0.1,  output: 10  },
   "claude-haiku-5-5"  : { input: 0.1, write: 0.125, read: 0.01, output: 0.5 },
+  "group/adaptive"    : { input: 0,   write: 0,     read: 0,    output: 0   },
   "gpt-6-astra"       : { input: 10,  write: 12.5, read: 1,    output: 50  },
   "gpt-6.1-sol"       : { input: 2,   write: 2,    read: 0.1,  output: 10  },
   "gpt-6-luna"        : { input: 0.1, write: 0.1,  read: 0.01, output: 0.5 },
